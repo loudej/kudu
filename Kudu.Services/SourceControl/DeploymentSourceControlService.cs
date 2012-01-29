@@ -44,5 +44,12 @@ namespace Kudu.Services.SourceControl
         {
             return _repositoryManager.GetRepositoryType();
         }
+
+        [Description("Sets the message displayed at the end of a git push operation.")]
+        [WebInvoke(UriTemplate = "pushmessage")]
+        public void SetPushMessage(JsonObject input)
+        {
+            _repositoryManager.SetPushMessage((string)input["message"]);
+        }
     }
 }

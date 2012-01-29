@@ -92,6 +92,7 @@ namespace Kudu.Web.Controllers
                     {
                         IRepositoryManager repositoryManager = GetRepositoryManager(app);
                         repositoryManager.CreateRepository(appViewModel.RepositoryType);
+                        repositoryManager.SetPushMessage("Test push message!!");
                     }
 
                     db.Applications.Add(app);

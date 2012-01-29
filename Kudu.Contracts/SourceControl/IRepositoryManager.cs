@@ -6,5 +6,6 @@
         IRepository GetRepository();
         RepositoryType GetRepositoryType();
         void Delete();
+        void SetPushMessage(string message);
     }
 }

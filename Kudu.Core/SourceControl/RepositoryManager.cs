@@ -102,5 +102,12 @@ namespace Kudu.Core.SourceControl
 
             return RepositoryType.None;
         }
+
+
+        public void SetPushMessage(string message)
+        {
+            // TODO: implement
+            throw new NotImplementedException();
+        }
     }
 }

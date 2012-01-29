@@ -43,5 +43,12 @@ namespace Kudu.Client.SourceControl
         {
             return new RemoteRepository(_client.BaseAddress.OriginalString);
         }
+
+        public void SetPushMessage(string message)
+        {
+            _client.PostAsync("pushmessage", HttpClientHelper.CreateJsonContent(new KeyValuePair<string, string>("message", message)))
+                   .Result
+                   .EnsureSuccessful();
+        }
     }
 }
